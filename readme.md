@@ -121,3 +121,13 @@ que he tenido que ir realizando para ir actualizando el readme, parece una pereg
 **Explicación**
 Bueno, pues lo dicho, con el *git reflog* obtengo el id gracias a los comentarios de los commits
 y después es realizar un *git reset --hard <id>
+
+#Paso 32: volver al commit inicial cuando se creó el poema
+
+**Comandos**
+git log
+git reser --hard id**
+
+**Explicación**
+Como estoy en la rama master basta hacer un *git log* para ver el id (SHA) del primer commit
+y a continuación un *git reset --hard id*
