@@ -45,4 +45,12 @@ Puesto que estamos en la rama *htmlify* y ésta será absorbida por *styled* hay
 Por ello lo primero se realiza el *git checkout styled* y a continuación sacamos la cola succionadora con
 *git merge htmlify*
 
+# Paso 21: desde master, hacer un merge con styled
 
+**Comando**
+*git checkout master*
+*git merge styled*
+
+**Explicación**
+Misma explicación que paso 19, salvo que como estamos en la rama *styled* debemos pasar a *master" y que
+ahora es *styled* la que sufre la consecuencias y es absorbida por *master*. El mundo es así...
