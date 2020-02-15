@@ -68,7 +68,7 @@ y también cuando es absorbida
 #Paso 26: hacer un merge "no fast-forward" de title en master
 
 **Comando**
-git merge --no-ff title
+*git merge --no-ff title*
 
 **Explicación**
 Si no se hubiese especifado el parámetro *--no-ff* git hubiera realizado un merge *fast-forward* puesto
@@ -80,7 +80,7 @@ commit hasta ahora apuntado por *HEAD* y *master* y que ahora apuntaran a este n
 #Paso 27: deshacer el merge (sin perder los cambios del working copy)
 
 **Comandos*
-git reset HEAD~1
+*git reset HEAD~1*
 
 **Explicación**
 Ha diferencia del paso 11 en el cual se querían los perder los cambios, en éste paso se pide
@@ -91,7 +91,7 @@ mejora en el código, etc
 #Paso 28: descartar los cambios
 
 **Comandos**
-git checkout --git-nuestro.md
+*git checkout --git-nuestro.md*
 
 **Explicación**
 Puesto que tenemos los cambios presentes todavía en el working copy la forma de que quede en su
@@ -100,9 +100,24 @@ estado original es simplemente ejecutando *git checkout --<nombreArchivo>*
 #Paso 29: eliminar la rama title
 
 **Comandos**
-git branch -d title
+*git branch -d title*
 
 **Explicación**
 Aquí lo importante es que para poder eliminar una rama, realmente se elimina el puntero no los
 commits que se fuesen generando por esa rama, se ha de estar en una rama que no sea la que se 
 va a eliminar. Como estamos en master no hay problema alguno.
+
+#Paso 30: rehacer el merge que hemos deshecho
+##Nota para Alberto: en este paso me he hecho un poco de lío. La forma de localizar el commit
+en cuestión la tenía clara con el comando *git reflog*. El problema es que después me he
+hecho un poco de lío para acceder a dicho commit por medio de su SHA. He utilizado el checkout
+y claro me salía el famoso mensaje de que el HEAD estaba apuntado directamente a un commit. Después he intentando invertir la situación y total cuando veas el movimiento por un momento
+ha cundido el pánico, por fin lo he podido resolver pero el reflog, entre esto y los paseitos
+que he tenido que ir realizando para ir actualizando el readme, parece una peregrinación
+**Comandos**
+*git reflog*
+*git reset --hard id*
+
+**Explicación**
+Bueno, pues lo dicho, con el *git reflog* obtengo el id gracias a los comentarios de los commits
+y después es realizar un *git reset --hard <id>
