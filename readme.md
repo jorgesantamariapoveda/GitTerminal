@@ -45,7 +45,7 @@ Puesto que estamos en la rama *htmlify* y ésta será absorbida por *styled* hay
 Por ello lo primero se realiza el *git checkout styled* y a continuación sacamos la cola succionadora con
 *git merge htmlify*
 
-# Paso 21: desde master, hacer un merge con styled
+#Paso 21: desde master, hacer un merge con styled
 
 **Comando**
 *git checkout master*
@@ -54,3 +54,13 @@ Por ello lo primero se realiza el *git checkout styled* y a continuación sacamo
 **Explicación**
 Misma explicación que paso 19, salvo que como estamos en la rama *styled* debemos pasar a *master" y que
 ahora es *styled* la que sufre la consecuencias y es absorbida por *master*. El mundo es así...
+
+#Paso 25: dibujar el diagrama
+
+**Comando**
+*git log --graph*
+
+**Explicación**
+El comando *git log graph* nos muestra una especie de mapa del metro con los diferentes commits desde la
+rama en la que estamos y con todas las bifurcaciones que se hallan podido surgir al crear una nueva rama
+y también cuando es absorbida 
