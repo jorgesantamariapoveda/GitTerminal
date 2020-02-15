@@ -34,4 +34,15 @@ en styled desde donde debemos sacar la cola succionadora para absorver a master.
 styled, para asegurarnos podemos ejecutar el comando *git branch*, solamente hay que indicar la rama que
 será nuestra víctima *git merge nombreRamaVictimaAbsorbida*
  
+#Paso 19: hacer un merge de htmlify en styled (styled absrobe a htmlify)
+
+**Comando**
+*git checkout styled*
+*git merge htmlify*
+
+**Explicación**
+Puesto que estamos en la rama *htmlify* y ésta será absorbida por *styled* hay que moverse a ésta última.
+Por ello lo primero se realiza el *git checkout styled* y a continuación sacamos la cola succionadora con
+*git merge htmlify*
+
 
