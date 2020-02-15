@@ -1,7 +1,7 @@
 #Paso 11: deshacer último commit
 
 **Comando**
-git reset --hard HEAD~1
+*git reset --hard HEAD~1*
 
 **Explicación**
 La diferencia entre aplicar --hard o no aplicarla es que se pierden los cambios del
@@ -14,13 +14,24 @@ add y hacerles la foto con commit.
 #Paso 12: rehacer el último commit
 
 **Comando**
-git reflog
-git reset --hard SHA
+*git reflog*
+*git reset --hard SHA*
 
 **Explicación**
 Tenemos que ir hacia nuestro hijo por lo que necesitamos del caminito de migas que proporciona reflog para
-saber como se llama nuestro hijo (el SHA para los amigos). Aplico git reflog, gracias a los siempre útiles
+saber como se llama nuestro hijo (el SHA para los amigos). Aplico *git reflog*, gracias a los siempre útiles
 comentarios es fácil identificarlo. Una vez sabido su nombre (SHA) y como queremos recuperar el estado intacto
-tan solo hace falta hacer un git reset --hard <SHA>
+tan solo hace falta hacer un *git reset --hard <SHA>*
 
+#Paso 13: hacer un merge con master (styled abosrbe a master)
+
+**Comando**
+*git merge master*
+
+**Explicación**
+Aquí lo importante es saber quien absorbe a quien y como hacerlo. Como es styled quien absorbe a master es
+en styled desde donde debemos sacar la cola succionadora para absorver a master. Puesto que ya estamos en
+styled, para asegurarnos podemos ejecutar el comando *git branch*, solamente hay que indicar la rama que
+será nuestra víctima *git merge nombreRamaVictimaAbsorbida*
+ 
 
