@@ -96,3 +96,13 @@ git checkout --git-nuestro.md
 **Explicación**
 Puesto que tenemos los cambios presentes todavía en el working copy la forma de que quede en su
 estado original es simplemente ejecutando *git checkout --<nombreArchivo>*
+
+#Paso 29: eliminar la rama title
+
+**Comandos**
+git branch -d title
+
+**Explicación**
+Aquí lo importante es que para poder eliminar una rama, realmente se elimina el puntero no los
+commits que se fuesen generando por esa rama, se ha de estar en una rama que no sea la que se 
+va a eliminar. Como estamos en master no hay problema alguno.
