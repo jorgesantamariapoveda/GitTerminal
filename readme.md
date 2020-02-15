@@ -87,3 +87,12 @@ Ha diferencia del paso 11 en el cual se querían los perder los cambios, en ést
 deshacer el commit pero manteniendo los cambios en el working copy. Esto tiene varios motivos,
 como puede ser poner un comentario más apropiado a la hora de hacer el commit, hacer alguna 
 mejora en el código, etc
+
+#Paso 28: descartar los cambios
+
+**Comandos**
+git checkout --git-nuestro.md
+
+**Explicación**
+Puesto que tenemos los cambios presentes todavía en el working copy la forma de que quede en su
+estado original es simplemente ejecutando *git checkout --<nombreArchivo>*
