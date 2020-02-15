@@ -1,4 +1,4 @@
-#Paso 11: deshacer último commit
+#Paso 11: deshacer último commit (perdiendo los cambios realizados en el working copy)
 
 **Comando**
 *git reset --hard HEAD~1*
@@ -32,7 +32,7 @@ tan solo hace falta hacer un *git reset --hard <SHA>*
 Aquí lo importante es saber quien absorbe a quien y como hacerlo. Como es styled quien absorbe a master es
 en styled desde donde debemos sacar la cola succionadora para absorver a master. Puesto que ya estamos en
 styled, para asegurarnos podemos ejecutar el comando *git branch*, solamente hay que indicar la rama que
-será nuestra víctima *git merge nombreRamaVictimaAbsorbida*
+será nuestra víctima *git merge nombreRamaVictimaAbsorbida*.
  
 #Paso 19: hacer un merge de htmlify en styled (styled absrobe a htmlify)
 
@@ -76,3 +76,14 @@ que en este caso eran lineales (formaban una lista los commits), y por lo tanto 
 hecho un desplazamiento del puntero *HEAD* y *master* hacia el commit que es apuntado por *title*. De esta
 otra forma lo que se fuerza es a crear un nuevo commit que es hijo tanto de donde apunta *title" como del
 commit hasta ahora apuntado por *HEAD* y *master* y que ahora apuntaran a este nuevo commit
+
+#Paso 27: deshacer el merge (sin perder los cambios del working copy)
+
+**Comandos*
+git reset HEAD~1
+
+**Explicación**
+Ha diferencia del paso 11 en el cual se querían los perder los cambios, en éste paso se pide
+deshacer el commit pero manteniendo los cambios en el working copy. Esto tiene varios motivos,
+como puede ser poner un comentario más apropiado a la hora de hacer el commit, hacer alguna 
+mejora en el código, etc
