@@ -64,3 +64,15 @@ ahora es *styled* la que sufre la consecuencias y es absorbida por *master*. El 
 El comando *git log graph* nos muestra una especie de mapa del metro con los diferentes commits desde la
 rama en la que estamos y con todas las bifurcaciones que se hallan podido surgir al crear una nueva rama
 y también cuando es absorbida 
+
+#Paso 26: hacer un merge "no fast-forward" de title en master
+
+**Comando**
+git merge --no-ff title
+
+**Explicación**
+Si no se hubiese especifado el parámetro *--no-ff* git hubiera realizado un merge *fast-forward* puesto
+que en este caso eran lineales (formaban una lista los commits), y por lo tanto únicamente se hubiera
+hecho un desplazamiento del puntero *HEAD* y *master* hacia el commit que es apuntado por *title*. De esta
+otra forma lo que se fuerza es a crear un nuevo commit que es hijo tanto de donde apunta *title" como del
+commit hasta ahora apuntado por *HEAD* y *master* y que ahora apuntaran a este nuevo commit
