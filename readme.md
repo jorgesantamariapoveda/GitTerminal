@@ -1,6 +1,6 @@
 El objetivo de esta práctica consiste en asentar los conceptos de git mediante el uso de comandos desde la terminal
 
-## Paso 11: deshacer último commit (perdiendo los cambios realizados en el working copy)
+##### Paso 11: deshacer último commit (perdiendo los cambios realizados en el working copy)
 
 **Comando**
 _git reset --hard HEAD~1_
@@ -12,7 +12,7 @@ working copy. Con el simil de los minions viene a ser que en ambos casos los sac
 pero con --hard les quitamos además todo el maquillaje y sin hard les dejamos el maquillaje por si queremos
 además cortales el pelo antes de volver a subirlos al escenario con add y hacerles la foto con commit.
 
-## Paso 12: rehacer el último commit
+##### Paso 12: rehacer el último commit
 
 **Comando**
 _git reflog_
@@ -24,7 +24,7 @@ saber como se llama nuestro hijo (el SHA para los amigos). Aplico _git reflog_, 
 comentarios es fácil identificarlo. Una vez sabido su nombre (SHA) y como queremos recuperar el estado intacto
 tan solo hace falta hacer un _git reset --hard <SHA>_
 
-## Paso 13: hacer un merge con master (styled abosrbe a master)
+##### Paso 13: hacer un merge con master (styled abosrbe a master)
 
 **Comando**
 _git merge master_
@@ -35,7 +35,7 @@ en styled desde donde debemos sacar la cola succionadora para absorver a master.
 styled, para asegurarnos podemos ejecutar el comando _git branch_, solamente hay que indicar la rama que
 será nuestra víctima _git merge nombreRamaVictimaAbsorbida_.
 
-## Paso 19: hacer un merge de htmlify en styled (styled absrobe a htmlify)
+##### Paso 19: hacer un merge de htmlify en styled (styled absrobe a htmlify)
 
 **Comando**
 _git checkout styled_
@@ -46,7 +46,7 @@ Puesto que estamos en la rama _htmlify_ y ésta será absorbida por _styled_ hay
 Por ello lo primero se realiza el _git checkout styled_ y a continuación sacamos la cola succionadora con
 _git merge htmlify_
 
-## Paso 21: desde master, hacer un merge con styled
+##### Paso 21: desde master, hacer un merge con styled
 
 **Comando**
 _git checkout master_
@@ -56,7 +56,7 @@ _git merge styled_
 Misma explicación que paso 19, salvo que como estamos en la rama _styled_ debemos pasar a *master" y que
 ahora es *styled* la que sufre la consecuencias y es absorbida por *master\*. El mundo es así...
 
-## Paso 25: dibujar el diagrama
+##### Paso 25: dibujar el diagrama
 
 **Comando**
 _git log --graph_
@@ -66,7 +66,7 @@ El comando _git log graph_ nos muestra una especie de mapa del metro con los dif
 rama en la que estamos y con todas las bifurcaciones que se hallan podido surgir al crear una nueva rama
 y también cuando es absorbida
 
-## Paso 26: hacer un merge "no fast-forward" de title en master
+##### Paso 26: hacer un merge "no fast-forward" de title en master
 
 **Comando**
 _git merge --no-ff title_
@@ -78,7 +78,7 @@ hecho un desplazamiento del puntero _HEAD_ y _master_ hacia el commit que es apu
 otra forma lo que se fuerza es a crear un nuevo commit que es hijo tanto de donde apunta *title" como del
 commit hasta ahora apuntado por *HEAD* y *master\* y que ahora apuntaran a este nuevo commit
 
-## Paso 27: deshacer el merge (sin perder los cambios del working copy)
+##### Paso 27: deshacer el merge (sin perder los cambios del working copy)
 
 **Comandos**
 _git reset HEAD~1_
@@ -89,7 +89,7 @@ deshacer el commit pero manteniendo los cambios en el working copy. Esto tiene v
 como puede ser poner un comentario más apropiado a la hora de hacer el commit, hacer alguna
 mejora en el código, etc
 
-## Paso 28: descartar los cambios
+##### Paso 28: descartar los cambios
 
 **Comandos**
 _git checkout --git-nuestro.md_
@@ -98,7 +98,7 @@ _git checkout --git-nuestro.md_
 Puesto que tenemos los cambios presentes todavía en el working copy la forma de que quede en su
 estado original es simplemente ejecutando _git checkout --<nombreArchivo>_
 
-## Paso 29: eliminar la rama title
+##### Paso 29: eliminar la rama title
 
 **Comandos**
 _git branch -d title_
@@ -108,9 +108,9 @@ Aquí lo importante es que para poder eliminar una rama, realmente se elimina el
 commits que se fuesen generando por esa rama, se ha de estar en una rama que no sea la que se
 va a eliminar. Como estamos en master no hay problema alguno.
 
-## Paso 30: rehacer el merge que hemos deshecho
+##### Paso 30: rehacer el merge que hemos deshecho
 
-##### Nota: Alberto, en este paso me he hecho un poco de lío. La forma de localizar el commit
+########### Nota: Alberto, en este paso me he hecho un poco de lío. La forma de localizar el commit
 
 en cuestión la tenía clara con el comando _git reflog_. El problema es que después he hecho un
 _git checkout id_ y claro me salía el famoso mensaje de que el HEAD estaba apuntado directamente
@@ -124,7 +124,7 @@ _git reset --hard id_
 Bueno, pues lo dicho, con el _git reflog_ obtengo el id gracias a los comentarios de los commits
 y después es realizar un _git reset --hard <id>_
 
-## Paso 32: volver al commit inicial cuando se creó el poema
+##### Paso 32: volver al commit inicial cuando se creó el poema
 
 **Comandos**
 _git log_
@@ -134,7 +134,7 @@ _git reser --hard id_
 Como estoy en la rama master basta hacer un _git log_ para ver el id (SHA) del primer commit
 y a continuación un _git reset --hard id_
 
-## Paso 33: volver al estado final, cuando pusimos título al poema
+##### Paso 33: volver al estado final, cuando pusimos título al poema
 
 **Comandos**
 _git reflog_
