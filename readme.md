@@ -1,4 +1,7 @@
-El objetivo de esta práctica consiste en asentar los conceptos de git mediante el uso de comandos desde la terminal
+## Objetivo
+Asentar los conceptos de git mediante el uso de comandos desde la terminal.
+
+## Respuestas al cuestionario planteado
 
 ##### Paso 11: deshacer último commit (perdiendo los cambios realizados en el working copy)
 
