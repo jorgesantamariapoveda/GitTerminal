@@ -1,5 +1,5 @@
 ## Objetivo
-Asentar los conceptos de git mediante el uso de comandos desde la terminal.
+Asentar los conceptos de **git** mediante el uso de comandos desde la terminal.
 
 ## Respuestas al cuestionario planteado
 
